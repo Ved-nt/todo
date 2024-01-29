@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #f9d423 10%, #ff4e50 100%);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app img{
+    height: 25px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px; 
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1px;
+    font-size: 16px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    border-radius: 40px;
+    background-color: orange;
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+button:hover{
+    opacity: 0.9;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: .099999999999rem solid gray;
+    border-radius: 50%;
+    top: 12px;
+    left: 18px;
+}
+ul li.checked{
+    text-decoration:line-through;
+}
+ul li.checked::before{
+    background-color: rgb(81, 227, 81);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: black;
+    border-radius: 50%;
+    font-weight: 1000;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+
+@media(max-width:450px) and (min-width:300px){
+    .todo-app{
+        padding: 40px 8px 70px;
+    }
+    button{
+        padding: 16px 20px;
+    }
+}
