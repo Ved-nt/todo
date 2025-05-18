@@ -1,6 +1,16 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = dd + '/' + mm + '/' + yyyy;
+
+var a = document.querySelector(".heading");
+a.innerHTML = today;
+
+
 function AddTask(){
     if(inputBox.value === ''){
         alert("please write something");//it will run if input box is empty
